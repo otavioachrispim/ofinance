@@ -11,7 +11,7 @@ export function Input({name, label, ...rest}: InputProps){
             {!!label && 
                 <FormLabel 
                     htmlFor={name}
-                    color="green.500"
+                    color="green.50"
                 >
                     {label}
                 </FormLabel>
@@ -20,8 +20,9 @@ export function Input({name, label, ...rest}: InputProps){
             <ChakraInput 
               name={name}
               id={name}
-              bgColor="green.500"
-              focusBorderColor="green.900"              
+              bgColor="green.50"
+              focusBorderColor="green.900"      
+              color="green.900"        
               size="lg"
               {...rest}
             />

@@ -9,21 +9,19 @@ export default function SignIn() {
       h="100vh"
       align="center"
       justify="center"
-      flexDir="column"   
-    >
-      
+      flexDir="column"  
+    >   
 
       <Flex
        as="form"
        w="100%" 
        maxWidth={420}
-       bg="white"
        p="10"
        borderRadius={20}
        flexDir="column"       
       >
         <Image 
-          src="/images/logo.svg"
+          src="/images/logo1.svg"
           alt="Logo" 
           objectFit="contain"
           mb="4"
@@ -36,6 +34,7 @@ export default function SignIn() {
         
           <Button 
             colorScheme="green"
+            color="green.50"
             type="submit"
             size="lg"
             mt="8"
