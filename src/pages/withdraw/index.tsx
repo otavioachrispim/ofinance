@@ -4,6 +4,7 @@ import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 import { Header } from '../../components/Header';
 import { Pagination } from '../../components/WithdrawPagination';
 import { Sidebar } from '../../components/Sidebar';
+import Link from 'next/Link';
 
 export default function Withdraw(){
     return (
@@ -26,15 +27,17 @@ export default function Withdraw(){
                     <Flex mb="8" justify="space-between" align="center" >
                         <Heading size="lg" fontWeight="normal" color="red.50">Despesas</Heading>
 
-                        <Button 
-                            as="a" 
-                            size="sm" 
-                            fontSize="sm" 
-                            colorScheme="red"
-                            leftIcon={<Icon as={RiAddLine} />}
-                        > 
-                            Nova Transação
-                        </Button>
+                        <Link href="withdraw/create" passHref>
+                            <Button 
+                                as="a" 
+                                size="sm" 
+                                fontSize="sm" 
+                                colorScheme="red"
+                                leftIcon={<Icon as={RiAddLine} />}
+                            > 
+                                Nova Transação
+                            </Button>
+                        </Link>
 
                     </Flex>
 

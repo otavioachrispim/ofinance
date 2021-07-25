@@ -4,6 +4,7 @@ import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 import { Header } from '../../components/Header';
 import { Pagination } from '../../components/DepositPagination';
 import { Sidebar } from '../../components/Sidebar';
+import Link from 'next/Link';
 
 export default function Deposit(){
     const isDesktopVersion = useBreakpointValue({
@@ -31,15 +32,17 @@ export default function Deposit(){
                     <Flex mb="8" justify="space-between" align="center" >
                         <Heading size="lg" fontWeight="normal" color="green.50">Receitas</Heading>
 
-                        <Button 
-                            as="a" 
-                            size="sm" 
-                            fontSize="sm" 
-                            colorScheme="green"
-                            leftIcon={<Icon as={RiAddLine} />}
-                        > 
-                            Nova Transação
-                        </Button>
+                        <Link href="/deposit/create" passHref>
+                            <Button 
+                                as="a" 
+                                size="sm" 
+                                fontSize="sm" 
+                                colorScheme="green"
+                                leftIcon={<Icon as={RiAddLine} />}
+                            > 
+                                Nova Transação
+                            </Button>
+                        </Link>
 
                     </Flex>
 

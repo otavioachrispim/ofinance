@@ -8,10 +8,10 @@ export function SidebarNav(){
     return(
         <Stack align="center" color="green.50" mt="4" >
             <NavSection>
-                <NavLink icon={RiDashboardLine}>Dashboard</NavLink>           
-                <NavLink icon={RiArrowUpCircleLine}>Receitas</NavLink>           
-                <NavLink icon={RiArrowDownCircleLine}>Despesas</NavLink>           
-                <NavLink icon={RiSettings5Line}>Configuração</NavLink> 
+                <NavLink icon={RiDashboardLine} href="/dashboard">Dashboard</NavLink>           
+                <NavLink icon={RiArrowUpCircleLine} href="/deposit">Receitas</NavLink>           
+                <NavLink icon={RiArrowDownCircleLine} href="/withdraw">Despesas</NavLink>           
+                <NavLink icon={RiSettings5Line} href="/config">Configuração</NavLink> 
             </NavSection>              
         </Stack>  
     )

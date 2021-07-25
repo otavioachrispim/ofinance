@@ -29,7 +29,7 @@ const options = {
     },
     stroke: {
         width: [1,1,3],
-        colors: [ "#48BB78", "#F56565", "#234E52"],
+        colors: [ "#48BB78", "#F56565", "#F6AD55"],
 
     },
     xaxis:{
@@ -69,7 +69,7 @@ const options = {
 const series = [
     {name: 'receitas', data: [10,2,35,42,15,56,27,38,59,100,11,120], color: "#48BB78"},
     {name: 'despesas', data: [-5,-10,-50,-42,-15,-56,-27,-38,-59,-100,-11,-120], color: "#F56565"},
-    {name: 'total', data: [5,-8,-15,-27,41,-28,32,62,-59,90,-11,110], color: "#234E52"},
+    {name: 'total', data: [5,-8,-15,-27,41,-28,32,62,-59,90,-11,110], color: "#F6AD55"},
 ];
 
 export default function Dashboard(){
