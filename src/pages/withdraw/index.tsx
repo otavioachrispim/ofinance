@@ -3,7 +3,7 @@ import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 
 import { Header } from '../../components/Header';
 import { Pagination } from '../../components/WithdrawPagination';
-import { Siderbar } from '../../components/Sidebar';
+import { Sidebar } from '../../components/Sidebar';
 
 export default function Withdraw(){
     return (
@@ -16,7 +16,7 @@ export default function Withdraw(){
             display="flex"
         >
 
-            <Siderbar />
+            <Sidebar />
 
             <Flex w="100%" flexDir="column" align="center">
 

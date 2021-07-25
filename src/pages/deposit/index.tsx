@@ -1,24 +1,29 @@
-import {Box, Flex, Heading, Button, Icon, Table, Thead, Td, Tr, Tbody, Th, Text} from '@chakra-ui/react';
+import {Box, Flex, Heading, Button, Icon, Table, Thead, Td, Tr, Tbody, Th, Text, useBreakpointValue} from '@chakra-ui/react';
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 
 import { Header } from '../../components/Header';
 import { Pagination } from '../../components/DepositPagination';
-import { Siderbar } from '../../components/Sidebar';
+import { Sidebar } from '../../components/Sidebar';
 
 export default function Deposit(){
+    const isDesktopVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    })
+
     return (
         <Box 
             w="100%"
-            my="6"            
+            my={["4","6" ]}           
             maxWidth={1400}
             mx="auto"
-            px="6"
+            px={["4","6" ]} 
             display="flex"
         >
 
-            <Siderbar />
+            <Sidebar />
 
-            <Flex w="100%" flexDir="column" align="center">
+            <Flex w={["100vh","100%"]} flexDir="column" align="center">
 
                 <Header />
                 <Box flex="1" borderRadius={8} p="8" bg="green.900" w="100%" mb="8" h="100%">
@@ -43,7 +48,9 @@ export default function Deposit(){
                             <Tr>                                
                                 <Th color="green.50">Título</Th>
                                 <Th color="green.50">Valor</Th> 
-                                <Th color="green.50">Data</Th> 
+                                {isDesktopVersion && (
+                                    <Th color="green.50">Data</Th>
+                                )}
                                 <Th></Th> 
                             </Tr>
                         </Thead>
@@ -57,7 +64,9 @@ export default function Deposit(){
                                         <Text color="green.50" fontWeight="bold">R$3.000,00</Text>
                                     </Box>
                                 </Td>
-                                <Td color="green.50">02 de julho, 2021</Td>
+                                {isDesktopVersion && (
+                                    <Td color="green.50">02 de julho, 2021</Td>
+                                )}
                                 <Td>
                                     <Button 
                                         as="a" 
@@ -66,7 +75,7 @@ export default function Deposit(){
                                         colorScheme="green"
                                         leftIcon={<Icon as={RiPencilLine} />}
                                     > 
-                                        Editar
+                                        {isDesktopVersion ? 'Editar' : ''}
                                     </Button>
                                 </Td>
                                 
@@ -82,7 +91,9 @@ export default function Deposit(){
                                         <Text color="green.50" fontWeight="bold">R$500,00</Text>
                                     </Box>
                                 </Td>
-                                <Td color="green.50">10 de julho, 2021</Td>
+                                {isDesktopVersion && (
+                                    <Td color="green.50">10 de julho, 2021</Td>
+                                )}
                                 <Td>
                                     <Button 
                                         as="a" 
@@ -91,7 +102,7 @@ export default function Deposit(){
                                         colorScheme="green"
                                         leftIcon={<Icon as={RiPencilLine} />}
                                     > 
-                                        Editar
+                                        {isDesktopVersion ? 'Editar' : ''}
                                     </Button>
                                 </Td>
                                 
@@ -107,7 +118,9 @@ export default function Deposit(){
                                         <Text color="green.50" fontWeight="bold">R$960,00</Text>
                                     </Box>
                                 </Td>
-                                <Td color="green.50">02 de julho, 2021</Td>
+                                {isDesktopVersion && (
+                                    <Td color="green.50">12 de julho, 2021</Td>
+                                )}
                                 <Td>
                                     <Button 
                                         as="a" 
@@ -116,7 +129,7 @@ export default function Deposit(){
                                         colorScheme="green"
                                         leftIcon={<Icon as={RiPencilLine} />}
                                     > 
-                                        Editar
+                                        {isDesktopVersion ? 'Editar' : ''}
                                     </Button>
                                 </Td>
                                 

@@ -2,7 +2,7 @@ import {Flex, SimpleGrid, Box, Text, Button, Icon, Table, Thead, Td, Tr, Tbody, 
 import dynamic from 'next/dynamic';
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 import { Header } from '../components/Header';
-import { Siderbar } from '../components/Sidebar';
+import { Sidebar } from '../components/Sidebar';
 
 const Chart = dynamic(() => import('react-apexcharts'), {
     ssr: false,
@@ -81,7 +81,7 @@ export default function Dashboard(){
             mx="auto"
             px="6"
         >
-            <Siderbar />
+            <Sidebar />
 
             <SimpleGrid flex="1" gap="4" align="center" bg="green.800">
                 <Header />

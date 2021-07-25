@@ -7,8 +7,8 @@ export function Logo(){
           alt="Logo" 
           objectFit="contain"
           mb="4"
-          w="240"
-          h="240"
+          w={["120","160"]}
+          h={["120","160"]}
         />
     );
 }

@@ -2,7 +2,7 @@ import {Box, Flex, Heading, Divider, VStack, SimpleGrid,HStack,Link, Button} fro
 import { Input } from '../../components/Form/Input';
 
 import { Header } from '../../components/Header';
-import { Siderbar } from '../../components/Sidebar';
+import { Sidebar } from '../../components/Sidebar';
 
 export default function CreateDeposit(){
     return (
@@ -15,7 +15,7 @@ export default function CreateDeposit(){
             display="flex"
         >
 
-            <Siderbar />
+            <Sidebar />
 
             <Flex w="100%" flexDir="column" align="center">
 
